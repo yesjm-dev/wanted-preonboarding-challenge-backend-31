@@ -1,8 +1,14 @@
 package com.yesjm.ecommerce.domain;
 
 import jakarta.persistence.*;
+import lombok.*;
 
 @Entity
+@Getter
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@Table(name = "product_tags")
 public class ProductTag {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
